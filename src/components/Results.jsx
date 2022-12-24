@@ -18,10 +18,16 @@ export const Results = () => {
 	}
 	return (
 		<div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
-			{results?.data?.organic_results.map((object) => (
-				<div>
-					<p>{object.title}</p>
-					<p>{object.url}</p>
+			{results?.data?.organic_results.map((object, index) => (
+				<div key={index} className="md:w-2/5 w-full">
+					<a href={object.url} target="_blank" rel='noreferrer'>
+						<p className='text-sm'>
+							{object.url > 30 ? object.url.substring(0, 30) : object.url}
+						</p>
+						<p className='text-lg hover:underline dark:text-blue-300 text-blue-700'>
+							{object.title}
+						</p>
+					</a>
 					<p>{object.desc}</p>
 				</div>
 
