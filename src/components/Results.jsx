@@ -16,22 +16,18 @@ export const Results = () => {
 	if (isLoading) {
 		return <Loading />
 	}
-
-	switch (location.pathname) {
-		case '/search':
-			return (
-				<div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
-					{results?.data?.map((object) => (
-						<p>{object}</p>
-					))}
+	return (
+		<div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
+			{results?.data?.organic_results.map((object) => (
+				<div>
+					<p>{object.title}</p>
+					<p>{object.url}</p>
+					<p>{object.desc}</p>
 				</div>
-			)
-		case '/news':
-			return 'NEWS'
-		case '/videos':
-			return 'VIDEOS'
-		default:
-			return 'ERROR'
-	}
+
+			))}
+		</div>
+	)
+
 }
 
