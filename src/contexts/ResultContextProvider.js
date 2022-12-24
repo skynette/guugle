@@ -6,7 +6,7 @@ const baseUrl = 'https://g-search.p.rapidapi.com/search?'
 export const ResultContextProvider = ({ children }) => {
 	const [results, setResults] = useState([])
 	const [isLoading, setIsLoading] = useState(false)
-	const [searchTerm, setSearchTerm] = useState('food')
+	const [searchTerm, setSearchTerm] = useState('')
 
 	const getResults = async (query) => {
 		setIsLoading(true)
@@ -14,7 +14,7 @@ export const ResultContextProvider = ({ children }) => {
 		const response = await fetch(`${baseUrl}${query}`, {
 			method: 'GET',
 			headers: {
-				'X-RapidAPI-Key': '1ad3108dbamsh42c339f8dcac422p100c28jsnd360b48a35a9',
+				'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
 				'X-RapidAPI-Host': 'g-search.p.rapidapi.com'
 			}
 		})
