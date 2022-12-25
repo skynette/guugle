@@ -7,7 +7,7 @@ export const Search = () => {
   const { getResults, searchTerm, setSearchTerm } = useResultContext()
 
   const gSearch = (searchTerm) => {
-    getResults(`q=${searchTerm}&location_name=Nigeria%2CNigeria%2CNigeria&location_parameters_auto=true`)
+    getResults(`query=${searchTerm}`)
   }
 
   return (

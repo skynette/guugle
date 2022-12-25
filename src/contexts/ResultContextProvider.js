@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const ResultContext = createContext()
-const baseUrl = 'https://g-search.p.rapidapi.com/search?'
+const baseUrl = 'https://google-search-engine1.p.rapidapi.com/api/search?'
 
 export const ResultContextProvider = ({ children }) => {
 	const [results, setResults] = useState([])
@@ -15,7 +15,7 @@ export const ResultContextProvider = ({ children }) => {
 			method: 'GET',
 			headers: {
 				'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
-				'X-RapidAPI-Host': 'g-search.p.rapidapi.com'
+				'X-RapidAPI-Host': 'google-search-engine1.p.rapidapi.com'
 			}
 		})
 		const data = await response.json()
