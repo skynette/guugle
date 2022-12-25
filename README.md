@@ -1,4 +1,5 @@
 ## About Guuuuuuugle
+![Guuuuuuugle](https://images2.imgbox.com/de/c2/AYc6oZ07_o.png)
 
 Guuuuuuugle is a google search clone
 It makes use of APIs that webscrape the internet to provide the search results
