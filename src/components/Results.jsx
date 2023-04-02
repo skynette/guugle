@@ -4,11 +4,11 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import { Loading } from './Loading'
 
 export const Results = () => {
-	const { results, isLoading, getResults, searchTerm } = useResultContext()
-	// const place = "Nigeria"
-	useEffect(() => {
-		getResults(`query=${searchTerm}`)
-	}, [])
+	const { results, isLoading, searchGoogle, searchTerm, searchType } = useResultContext()
+
+	// useEffect(() => {
+	// 	searchGoogle(searchTerm}, searchType)
+	// }, [searchTerm, searchType, searchGoogle])
 
 
 	if (isLoading) {
@@ -30,18 +30,18 @@ export const Results = () => {
 						</a>
 						<p>{object.paragraph}</p>
 					</div>
-	
+
 				))}
 			</div>
 		)
 	}
-	else{
+	else {
 		return (
 			<div className='flex justify-center items-center'>
 				<p className='text-2xl'>No results</p>
 			</div>
 		)
-	
+
 	}
 
 }
