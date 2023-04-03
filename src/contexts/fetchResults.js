@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const searchGoogle = async (query, searchType = '') => {
-	const SERP_API_KEY = 'b32d0eb51cec3dbc12ea642eee23dbeed3245a681a3957dbef2162a15ef2bffc';
+	const SERP_API_KEY = '';
 	const url = 'https://serpapi.com/search';
 
 	// initialize variables
