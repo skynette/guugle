@@ -4,6 +4,7 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import { Loading } from './Loading'
 
 export const Results = () => {
+	console.log("results component mounted");
 	const { results, isLoading, searchGoogle, searchTerm, searchType } = useResultContext()
 
 	// useEffect(() => {

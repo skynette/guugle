@@ -10,10 +10,10 @@ export const Search = () => {
 	const gSearch = (searchTerm, searchType) => {
 		searchGoogle(searchTerm, searchType)
 	}
+
 	const handleLinkClick = (linkText) => {
 
 		console.log(`Clicked link with text "${linkText}"`)
-		// do something with the clicked link text
 		setSearchType(linkText)
 	}
 	return (

@@ -5,7 +5,7 @@ export const Routes = () => {
   return (
     <div className='p-4'>
       <Switch>
-        <Route path="/" element={<Redirect replace to="/search" />} />
+        <Route path="/" exact element={<Redirect replace to="/search" />} />
         <Route exact path='/search' element={<Results />} />
         <Route exact path='/images' element={<Results />} />
         <Route exact path='/news' element={<Results />} />
